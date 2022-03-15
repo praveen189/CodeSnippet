@@ -1,0 +1,17 @@
+.problemSat{
+    font-size: 20px;
+    font-style: italic;
+}
+.problemDes p, h3{
+    font-size: 20px;
+    font-family:cursive;
+}
+.prbNavi{
+    padding: 20px;
+}
+/* .LeftAlign li, a{
+    padding-left: 5px;
+} */
+.padding {
+    padding: 20px;
+}

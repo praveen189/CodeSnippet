@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="Description" CONTENT="0 1 KnapSack Recursive approach ">
+    <meta name="Dynamic Programming" content="0 1 KnapSack Recursive approach  "/>
+
+    <link rel="stylesheet" href="DpStyle.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>DP</title>
+</head>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  sticky-top">
+        <div class="container-fluid">
+            <img src="../img/codeSnippetLogo.png" alt="logo" width="110" height="90">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Binary Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Stack</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Heap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact me</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- main content of dp -->
+<div class="content">
+    <!-- 1. two div one for topic and some code or text 
+        2. right div for the links  -->
+
+    <!-- 1. left for conect  -->
+    <div class="leftContent" id="code">
+        <h2 id="DynamicProgramming">Dyanmic Programming</h2>
+        <div class="contentBox" class="vstack gap-3">
+            <h1 id="DP_01"> <i><u> DP_01:</u></i>  0 1 KnapSack Recursive approach </h1>
+            <p class="problemSat">Given weights and values of n items, put these items in a knapsack of capacity W to
+                get the maximum total value in the knapsack. In other words, given two integer arrays val[0..n-1] and
+                wt[0..n-1] which represent values and weights associated with n items respectively. Also given an
+                integer W which represents knapsack capacity, find out the maximum value subset of val[] such that sum
+                of the weights of this subset is smaller than or equal to W. You cannot break an item, either pick the
+                complete item or don’t pick it (0-1 property).</p>
+            <h3>Recursion by Brute-Force algorithm </h3>
+            <div class="problemDes">
+                <p>Eevery recursive solution will have a base condition.
+                    and for base condition we need to think of the smallest valid input that we can pass
+                    array size can be atleast 0 || min weight can be 0 but not negetive; </p>
+                <img src="../dpImg/prob_1_01KSRecursiveBC.png" alt="code" style="width: 80%; height: 200px;">
+                <!-- date and time of upload  -->
+                <h3>Choice Diagram</h3>
+                <p>return as it is by redusing the size of array and then return as it is by redusing the size of array </p>
+                <img src="../dpImg/prob_1_01KSRecursive.png" alt="code" style="width: 80%; height: 320px;">
+    
+                <h3>Main Function and O/P</h3>
+                <img src="../dpImg/prob_1_01KSRecursivemain.png" alt="code" style="width: 80%; height: 320px;">
+    
+                <h4>Article Contributed By : <a href="#">Self</a> <a href="#" style="padding-left: 20px;">Actual Code</a></h4>
+                <h4>Upblished: 16-02-2022, time: 22:57pm </h4>
+            </div>
+
+        </div>
+
+        <div class="contentBox" class="vstack gap-3">
+            <a href=""></a>
+
+            <h1 id="DP_02"> <i><u> DP_02:</u></i> 0 1 KnapSack Top Down approach </h1>
+            <p class="problemSat">Given weights and values of n items, put these items in a knapsack of capacity W to
+                get the maximum total value in the knapsack. In other words, given two integer arrays val[0..n-1] and
+                wt[0..n-1] which represent values and weights associated with n items respectively. Also given an
+                integer W which represents knapsack capacity, find out the maximum value subset of val[] such that sum
+                of the weights of this subset is smaller than or equal to W. You cannot break an item, either pick the
+                complete item or don’t pick it (0-1 property).</p>
+            <h3>Using Top Down approach </h3>
+            <div class="problemDes"> 
+                <p >Eevery recursive solution will have a base condition.
+                    and for base condition we need to think of the smallest valid input that we can pass
+                    array size can be atleast 0 || min weight can be 0 but not negetive; </p>
+                    <h3>Initialization of matirix of t[n+1][Sum+1]</h3>
+                <img src="../dpImg/prob_2_01KSTopDownBC.png" alt="code" style="width: 80%; height: 200px;">
+                <!-- date and time of upload  -->
+                <h3>Choice Diagram</h3>
+                <p>return as it is by redusing the size of array and then return as it is by redusing the size of array </p>
+                <img src="../dpImg/prob_2_01KsTopDownmain.png" alt="code" style="width: 80%; height: 320px;">
+    
+                <h3>Main Function and O/P</h3>
+                <img src="../dpImg/prob_1_01KSRecursivemain.png" alt="code" style="width: 80%; height: 320px;">
+    
+                <h4>Article Contributed By : <a href="#">Self</a> <a href="#" style="padding-left: 20px;">Actual Code</a> </h4>
+                <h4>Upblished: 16-02-2022, time: 24:23pm </h4>
+            </div>
+
+        </div>
+
+        <div class="contentBox" class="vstack gap-3">
+            <a href=""></a>
+
+            <h1 id="DP_03"> <i><u> DP_03:</u></i> 0 1 Sub Set Sum </h1>
+            <p class="problemSat">Given an array of non-negative integers, and a value sum, determine if there is a subset of the given set with sum equal to given sum. </p>
+            <h3>Using DP approach </h3>
+            <div class="problemDes"> 
+                <p >Eevery recursive solution will have a base condition.
+                    and for base condition we need to think of the smallest valid input that we can pass
+                    array size can be atleast 0 || min weight can be 0 but not negetive; </p>
+                    <h3>Initialization of matirix of t[n+1][Sum+1]</h3>
+                <img src="../dpImg/prob_3_01SubSetbc.png" alt="code" style="width: 80%; height: 200px;">
+                <!-- date and time of upload  -->
+                <h3>Choice Diagram</h3>
+                <p>return as it is by redusing the size of array and then return as it is by redusing the size of array </p>
+                <img src="../dpImg/prob_3_01SubSetbcMain.png" alt="code" style="width: 80%; height: 320px;">
+    
+                <h3>Main Function and O/P</h3>
+                <img src="../dpImg/prob_3_01SubSetbcop.png" alt="code" style="width: 80%; height: 320px;">
+    
+                <h4>Article Contributed By : <a href="#">Self</a> <a href="#" style="padding-left: 20px;">Actual Code</a> </h4>
+                <h4>Upblished: 16-02-2022, time: 24:23pm </h4>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 2. right div for links -->
+    <div class="rightContent">
+        <div class="prbNavi">
+            <h2>Problem on Dynamic Programming</h2>
+            <ul id="LeftAlign">
+                <li><a href="#DP_01">0 1 KnapSack Recursive approach</a></li>
+                <li><a href="#DP_02">0 1 KnapSack Top Down approach</a></li>
+                <li><a href="#DP_03">0 1 KnapSackSub set Sum T/F</a></li>
+            </ul>
+        </div>
+        <hr>
+
+
+        <h2 id="rightContentPunchLine">Help improve CodeSnippet Docs</h2>
+        <p>All parts of CodeSnippet (docs and the site itself) are created by an open community of developers. Please
+            join us! Pick one of these ways to help:</p>
+        <div class="prbNavi">
+            <ul id="LeftAlign">
+                <li><a href="#">Contributing to MDN content</a></li>
+                <li><a href="#">Contributing to the MDN codebase</a></li>
+                <li><a href="#">Updating browser compatibility data</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="list" class="Contribute">
+            <h4>Content</h4>
+            <ul id="LeftAlign">
+                <li><a href="#">Dp</a></li>
+                <li><a href="#">Recursion</a></li>
+                <li><a href="#">Binary Search</a></li>
+                <li><a href="#">Backtracking</a></li>
+                <li><a href="#">Stack</a></li>
+                <li><a href="#">Heap</a></li>
+            </ul>
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+<div class="footerBottom">
+    <h2>About Us</h2>
+    <hr>
+    <div class="footer" class="padding">
+        <div class="leftFooter" class="footerContent">
+            <h2>Contact Us</h2>
+            <p>We are team for free contribution based on our leaning and expriences.<br>CodeSnippet is channel where you can learn Data structure and Algorithm, C, C++, HTML, CSS, JavaScript etc.</p>
+            <p>Author: CodeSnippet<br>
+                <a href="#"><i class="fa-solid fa-phone" style="font-size:20px">123456789</i></a>
+                
+                <br>
+                <a href="mailto:CodeSnippet@gmail.com">CodeSnippet@gmail.com</a></p>
+                
+        </div>
+
+        <div class="middleFooter" class="footerContent">
+            <h2>Our services </h2>
+            <div class="prbNavi">
+                <ul id="LeftAlign">
+                    <li><a href="#">Data structure and Algorithm</a></li>
+                    <li><a href="#">Web development</a></li>
+                    <li><a href="#">Fundamental Computing </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rightFooter" class="footerContent" >
+            <h2>Subscribe us</h2>
+            <form action="#" class="subscribeForm">
+                <input type="text" placeholder="Enter email address">
+                <input type="submit" name="" value="Send">
+              </form>
+              <div class="socialMIcons">
+                <i class="fa fa-facebook-official" style="font-size:30px"></i>
+                <i style="font-size:24px" class="fa">&#xf1d3;</i>
+                <i class="fa fa-linkedin-square" style="font-size:24px"></i>
+                <i class="fa fa-twitter" style="font-size:24px"></i>
+              </div>
+            
+            <!-- <a href="#"><i class="fa fa-twitter" style="font-size:24px">X</i></a> -->
+        </div>
+
+    </div>
+    <hr>
+    <div class="copyRight">
+        <h3>© 2022 individual contributors. Content is available under these licenses of codeSnippet.</h3>
+        <div class="copyRightLinks">
+            <a href="#"> Terms</a>
+            <a href="#"> Terms</a>
+            <a href="#"> Terms</a>
+
+            <a href="#" id="" FloatLeft> Move to Top</a>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
